@@ -1,42 +1,62 @@
 import React from 'react';
 
 const services = [
-  { title: 'Cloud-native Engineering', body: 'Modern cloud apps, Kubernetes, and multi-region deployment expertise.' },
-  { title: 'Digital Transformation', body: 'Process automation, data analytics, and UX modernization for enterprise teams.' },
-  { title: 'Managed Security', body: 'Proactive threat monitoring, Zero Trust, and incident response assurance.' },
+  {
+    title: 'Cloud-native Engineering',
+    body: 'Modern cloud apps, Kubernetes automation, and multi-region deployments with observability by design.',
+  },
+  {
+    title: 'Digital Transformation',
+    body: 'Process automation, data mesh designs, and UX modernization for enterprise-grade experiences.',
+  },
+  {
+    title: 'Managed Security',
+    body: 'Proactive threat monitoring, Zero Trust controls, and incident response orchestration.',
+  },
 ];
 
 const testimonials = [
-  { name: 'Samira Ortiz', title: 'VP of Product @ Brightflow', quote: 'Atlas IT took our beta roadmap from concept to production in under eight weeks.' },
-  { name: 'Leo Duncan', title: 'CIO @ Northmont Logistics', quote: 'Their cloud governance playbook delivered measurable savings and better uptime.' },
+  {
+    name: 'Samira Ortiz',
+    title: 'VP of Product @ Brightflow',
+    quote: 'Atlas IT took our beta roadmap from concept to production in under eight weeks with flawless delivery.',
+  },
+  {
+    name: 'Leo Duncan',
+    title: 'CIO @ Northmont Logistics',
+    quote: 'Their security playbook delivered measurable savings and better uptime across our fleet of apps.',
+  },
 ];
 
 const partnerLogos = ['EnergyX', 'PulseHealth', 'Nexera', 'Crestwave'];
 
 const Home = () => (
   <section className="home-page">
-    <div className="hero">
-      <p className="helper-text">Full-stack IT agency</p>
-      <h1>Enterprise-grade innovation, delivered with care.</h1>
+    <div className="section-card hero">
+      <div className="hero-badge">Full-stack IT services</div>
+      <h1>Enterprise-grade innovation, delivered with precision.</h1>
       <p>
-        We help ambitious companies build resilient digital platforms, orchestrate data across hybrid cloud,
-        and secure every layer of their delivery stack.
+        We help ambitious teams build resilient cloud platforms, orchestrate data across hybrid infrastructure,
+        and secure every layer of their delivery stack with measurable outcomes.
       </p>
-      <div className="experience">
-        <div>
-          <strong>+12</strong> years guiding enterprise teams
+      <div className="hero-metrics">
+        <div className="metric-pill">
+          <strong>+12</strong>
+          <span>Years guiding enterprise teams</span>
         </div>
-        <div>
-          <strong>300+</strong> successful launches
+        <div className="metric-pill">
+          <strong>300+</strong>
+          <span>Successfully launched products</span>
         </div>
-        <div>
-          <strong>24/7</strong> secure operations support
+        <div className="metric-pill">
+          <strong>24/7</strong>
+          <span>Security monitoring squad</span>
         </div>
       </div>
     </div>
 
-    <div className="services">
-      <h2>Services</h2>
+    <div className="section-card services">
+      <h2>What we solve</h2>
       <div className="services-grid">
         {services.map((service) => (
           <div className="service-card" key={service.title}>
@@ -47,21 +67,24 @@ const Home = () => (
       </div>
     </div>
 
-    <div className="testimonials">
-      <h2>Trusted by leaders</h2>
-      <div className="services-grid">
-        {testimonials.map((test) => (
-          <article className="testimonial-card" key={test.name}>
-            <p>"{test.quote}"</p>
-            <small>{test.name} · {test.title}</small>
+    <div className="section-card testimonials">
+      <h2>Trusted by growth-minded leaders</h2>
+      <div className="testimonials-grid">
+        {testimonials.map((testimonial) => (
+          <article className="testimonial-card" key={testimonial.name}>
+            <blockquote>“{testimonial.quote}”</blockquote>
+            <small>
+              {testimonial.name} · {testimonial.title}
+            </small>
           </article>
         ))}
       </div>
     </div>
 
-    <div className="cta">
+    <div className="section-card cta">
       <h2>Ready to reshape your IT experiences?</h2>
       <p>Schedule a discovery call and we will align our experts with your upcoming initiatives.</p>
+      <button type="button">Book a discovery call</button>
       <div className="partner-logos">
         {partnerLogos.map((logo) => (
           <span key={logo}>{logo}</span>
